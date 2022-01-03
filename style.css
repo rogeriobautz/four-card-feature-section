@@ -1,0 +1,191 @@
+:root {
+  /*Variables */
+  --primary-color1: hsl(0, 78%, 62%); /*Red*/
+  --primary-color2: hsl(180, 62%, 55%); /*Cyan*/
+  --primary-color3: hsl(34, 97%, 64%); /*Orange*/
+  --primary-color4: hsl(212, 86%, 64%); /*Blue*/
+  --neutral-color1: hsl(234, 12%, 34%); /*Very Dark Blue*/
+  --neutral-color2: hsl(229, 6%, 45%); /*Grayish Blue*/
+  /*--neutral-color2: lightness from 66% to 45% - contrast ratio issues. By the way, very common in Frontend Mentor Challenges*/
+  --neutral-color3: hsl(0, 0%, 98%); /*Very Light Gray*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--neutral-color3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 0.9375rem;
+  color: var(--neutral-color1);
+}
+
+.container {
+  width: 375px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.headings {
+  margin: 0 10px 62px;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.title strong {
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: var(--neutral-color2);
+  margin-top: 16px;
+}
+
+.card {
+  border-radius: 11px;
+  border-top: 4px solid;
+  padding: 20px 32px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-shadow: rgb(221, 221, 221) 0 10px 20px;
+  max-width: 328px;
+}
+
+.card:not(:last-child) {
+  margin-bottom: 28px;
+}
+
+.card1 {
+  border-color: var(--primary-color2);
+}
+.card2 {
+  border-color: var(--primary-color1);
+}
+.card3 {
+  border-color: var(--primary-color3);
+}
+.card4 {
+  border-color: var(--primary-color4);
+}
+
+.card-title {
+  font-weight: 600;
+}
+
+.card-description {
+  color: var(--neutral-color2);
+  font-size: 0.8125rem;
+  margin-top: 3px;
+}
+
+.card-logo {
+  align-self: flex-end;
+  margin-top: 42px;
+  height: 64px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 113%;
+  }
+  .container {
+    width: 716px;
+    max-width: 95vw;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 528px;
+    width: 100%;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .card {
+    max-width: 328px;
+  }
+
+  .headings {
+    margin: 0 inherit;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .subtitle {
+    font-size: 22px;
+    margin: 9px 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+  .headings {
+    margin: 0 auto 30px;
+  }
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .card-box {
+    align-items: center;
+    width: 722px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+  .card {
+    width: 350px;
+    max-width: none;
+    height: 245px;
+  }
+  .card-box {
+    max-height: 600px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .card1,
+  .card4 {
+    margin-top: 137px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+  .subtitle {
+    font-size: 16px;
+    margin: 18px 280px;
+  }
+}
